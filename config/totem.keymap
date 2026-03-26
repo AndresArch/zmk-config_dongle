@@ -303,10 +303,10 @@
 
         vim {
             bindings = <
-        &trans  &trans  &trans  &trans     &trans       &trans  &kp K    &trans  &trans  &trans
-        &trans  &trans  &trans  &kp LS(A)  &kp LS(O)    &kp H   &kp J    &kp L   &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans       &kp B   &trans   &trans  &trans  &trans  &trans
-                        &trans  &trans     &trans       &to 0   &kp ESC  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp K    &trans  &trans  &trans
+        &trans  &trans  &trans  &kp A   &kp O     &kp H   &kp J    &kp L   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp B   &trans   &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &to 0   &kp ESC  &trans
             >;
         };
     };
