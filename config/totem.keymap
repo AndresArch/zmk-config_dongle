@@ -176,7 +176,7 @@
             bindings = <
          &kp Q               &kp W       &kp F             &kp P            &kp G        &kp J      &kp L        &kp U              &kp Y       &kp SEMI
          &mt LEFT_COMMAND A  &mt LALT R  &mt LEFT_SHIFT S  &mt LCTRL T      &kp D        &kp H      &mt RCTRL N  &mt RIGHT_SHIFT E  &mt RALT I  &mt RIGHT_COMMAND O
-&kp RET  &kp Z               &kp X       &kp C             &kp V            &kp B        &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH             &tog 0
+&kp RET  &kp Z               &kp X       &kp C             &kp V            &kp B        &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH             &tog 7
                                          &kp TAB           &lt 1 BACKSPACE  &kp SPACE    &kp ENTER  &lt 2 ESC    &kp BSPC
             >;
         };
@@ -307,6 +307,15 @@
         &trans  &trans  &trans  &kp A   &kp O     &kp H   &kp J    &kp L   &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp B   &trans   &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &to 0   &kp ESC  &trans
+            >;
+        };
+
+        aero {
+            bindings = <
+        &trans  &trans  &kp K   &trans        &kp FSLH            &trans  &trans  &trans  &trans  &trans
+        &trans  &kp H   &kp J   &kp L         &kp COMMA           &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
+&trans  &trans  &trans  &trans  &trans        &kp TAB             &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LEFT_ALT  &kp LS(LEFT_ALT)    &to 0   &trans  &trans
             >;
         };
     };
