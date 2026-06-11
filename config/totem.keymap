@@ -42,7 +42,7 @@
         combo_tvp {
             timeout-ms = <100>;
             key-positions = <11 12 13>;
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
         };
 
         homerowSearch {
@@ -176,7 +176,7 @@
             bindings = <
                &kp Q               &kp W       &kp F             &kp P            &kp G        &kp J      &kp L        &kp U              &kp Y       &kp SEMI
                &mt LEFT_COMMAND A  &mt LALT R  &mt LEFT_SHIFT S  &mt LCTRL T      &kp D        &kp H      &mt RCTRL N  &mt RIGHT_SHIFT E  &mt RALT I  &mt RIGHT_COMMAND O
-&kp LC(TILDE)  &kp Z               &kp X       &kp C             &kp V            &kp B        &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH             &tog 7
+&kp LC(TILDE)  &kp Z               &kp X       &kp C             &kp V            &kp B        &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH             &tog 4
                                                &kp TAB           &lt 1 BACKSPACE  &kp SPACE    &kp ENTER  &lt 2 ESC    &kp BSPC
             >;
         };
@@ -201,7 +201,7 @@
                  &kp COLON  &kp SEMI   &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp N7        &kp N8          &kp N9        &kp KP_PLUS
                  &kp LSHFT  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp N5          &kp NUMBER_6  &kp KP_MINUS
 &kp PRINTSCREEN  &kp DEL    &kp PG_UP  &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3  &kp KP_MULTIPLY  &trans
-                                       &trans    &trans     &mo 3       &mo 4     &kp N0        &studio_unlock
+                                       &trans    &trans     &mo 3       &mo 5     &kp N0        &studio_unlock
             >;
         };
 
@@ -225,7 +225,7 @@
         &kp EXCL     &kp AT       &kp HASH   &kp DLLR       &kp PRCNT           &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
         &kp RA(A)    &trans       &kp RA(S)  &kp C_PP       &kp QUESTION        &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
 &trans  &kp RA(F18)  &kp RA(F19)  &trans     &kp LESS_THAN  &kp GREATER_THAN    &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &gif           &mo 4               &trans        &kp C_PP        &trans
+                                  &trans     &gif           &mo 5               &trans        &kp C_PP        &trans
             >;
         };
 
@@ -253,6 +253,15 @@
             >;
         };
 
+        aero {
+            bindings = <
+        &trans  &trans  &kp K   &trans        &kp FSLH            &kp A   &kp B   &kp C   &kp D   &kp E
+        &trans  &kp H   &kp J   &kp L         &kp COMMA           &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
+&trans  &trans  &trans  &trans  &kp COLON     &kp TAB             &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LEFT_ALT  &kp LS(LEFT_ALT)    &to 0   &trans  &trans
+            >;
+        };
+
         tvp1_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
@@ -271,7 +280,7 @@
 
             bindings = <
        &kp TAB    &kp I      &kp LC(LALT)  &kp O        &kp LC(F20)    &none  &none  &none  &none  &none
-       &lt 5 L    &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
+       &lt 6 L    &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
 &kp J  &kp LSHFT  &kp LC(C)  &kp BSPC      &kp LC(V)    &kp LC(F19)    &none  &none  &none  &none  &none  &none
                              &trans        &kp LC(F14)  &kp LC(F13)    &none  &none  &none
             >;
@@ -310,12 +319,12 @@
             >;
         };
 
-        aero {
+        layer_8 {
             bindings = <
-        &trans  &trans  &kp K   &trans        &kp FSLH            &trans  &trans  &trans  &trans  &trans
-        &trans  &kp H   &kp J   &kp L         &kp COMMA           &kp N1  &kp N2  &kp N3  &kp N4  &kp N5
-&trans  &trans  &trans  &trans  &kp COLON     &kp TAB             &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &kp LEFT_ALT  &kp LS(LEFT_ALT)    &to 0   &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
