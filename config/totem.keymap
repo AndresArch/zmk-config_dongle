@@ -54,6 +54,11 @@
             bindings = <&homerowScroll>;
             key-positions = <16 17>;
         };
+
+        aerospace {
+            bindings = <&tog 4>;
+            key-positions = <34 35>;
+        };
     };
 
     macros {
