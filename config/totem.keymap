@@ -29,10 +29,17 @@
     tapping-term-ms = <170>;
 };
 
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <100>;
+    acceleration-exponent = <0>;
+};
+
 &msc {
     x-input-code = <INPUT_REL_HWHEEL>;
     y-input-code = <INPUT_REL_WHEEL>;
-    time-to-max-speed-ms = <150>;
+    time-to-max-speed-ms = <50>;
     acceleration-exponent = <2>;
 };
 
