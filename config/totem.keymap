@@ -36,13 +36,6 @@
     acceleration-exponent = <0>;
 };
 
-&msc {
-    x-input-code = <INPUT_REL_HWHEEL>;
-    y-input-code = <INPUT_REL_WHEEL>;
-    time-to-max-speed-ms = <50>;
-    acceleration-exponent = <2>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -262,7 +255,7 @@
             bindings = <
         &sys_reset  &trans    &trans     &trans     &none    &msc SCRL_UP    &none           &mmv MOVE_UP    &none            &none
         &mkp MB4    &mkp MB5  &mkp LCLK  &mkp RCLK  &none    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&trans  &trans      &trans    &trans     &trans     &none    &trans          &none           &none           &none            &none  &trans
+&trans  &trans      &trans    &kp LG(C)  &kp LG(V)  &none    &trans          &none           &none           &none            &none  &trans
                               &trans     &trans     &to 0    &trans          &trans          &trans
             >;
         };
