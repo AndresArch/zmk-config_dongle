@@ -203,6 +203,18 @@
 
             tapping-term-ms = <550>;
         };
+
+        testnav2: testnav2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TESTNAV2";
+            bindings = <&to>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+        };
     };
 
     keymap {
@@ -227,10 +239,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp Q               &kp W       &kp F             &kp P            &kp G        &kp J      &kp L        &kp U              &kp Y       &kp SEMI
-               &mt LEFT_COMMAND A  &mt LALT R  &mt LEFT_SHIFT S  &mt LCTRL T      &kp D        &kp H      &mt RCTRL N  &mt RIGHT_SHIFT E  &mt RALT I  &mt RIGHT_COMMAND O
-&toMouseLayer  &kp Z               &kp X       &kp C             &kp V            &NAV2        &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH             &to 6
-                                               &kp TAB           &lt 1 BACKSPACE  &kp SPACE    &kp ENTER  &lt 2 ESC    &kp BSPC
+               &kp Q               &kp W       &kp F             &kp P            &kp G            &kp J      &kp L        &kp U              &kp Y       &kp SEMI
+               &mt LEFT_COMMAND A  &mt LALT R  &mt LEFT_SHIFT S  &mt LCTRL T      &kp D            &kp H      &mt RCTRL N  &mt RIGHT_SHIFT E  &mt RALT I  &mt RIGHT_COMMAND O
+&toMouseLayer  &kp Z               &kp X       &kp C             &kp V            &testnav2 9 B    &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH             &to 6
+                                               &kp TAB           &lt 1 BACKSPACE  &kp SPACE        &kp ENTER  &lt 2 ESC    &kp BSPC
             >;
         };
 
@@ -388,10 +400,10 @@
 
         vim {
             bindings = <
-       &none  &none  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)      &none    &none  &kp LA(LEFT)          &kp LA(RIGHT)      &none  &none
-       &none  &none  &kp LS(LC(LEFT))    &kp LS(LC(RIGHT))  &none    &none  &kp LS(LA(RC(LEFT)))  &kp LS(LA(RIGHT))  &none  &none
-&none  &none  &none  &none               &none              &none    &none  &none                 &none              &none  &none  &none
-                     &none               &none              &to 0    &to 0  &kp ESC               &kp BACKSPACE
+       &none  &none  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)      &none    &none  &kp LA(LEFT)      &kp LA(RIGHT)      &none  &none
+       &none  &none  &kp LS(LC(LEFT))    &kp LS(LC(RIGHT))  &none    &none  &kp LS(LA(LEFT))  &kp LS(LA(RIGHT))  &none  &none
+&none  &none  &none  &none               &none              &none    &none  &none             &none              &none  &none  &none
+                     &none               &none              &to 0    &to 0  &kp ESC           &kp BACKSPACE
             >;
 
             label = "nav2";
