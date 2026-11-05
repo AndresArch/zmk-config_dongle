@@ -194,6 +194,15 @@
 
             tapping-term-ms = <400>;
         };
+
+        NAV2: NAV2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NAV2";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&to 9>;
+
+            tapping-term-ms = <400>;
+        };
     };
 
     keymap {
@@ -220,7 +229,7 @@
             bindings = <
                &kp Q               &kp W       &kp F             &kp P            &kp G        &kp J      &kp L        &kp U              &kp Y       &kp SEMI
                &mt LEFT_COMMAND A  &mt LALT R  &mt LEFT_SHIFT S  &mt LCTRL T      &kp D        &kp H      &mt RCTRL N  &mt RIGHT_SHIFT E  &mt RALT I  &mt RIGHT_COMMAND O
-&toMouseLayer  &kp Z               &kp X       &kp C             &kp V            &kp B        &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH             &to 6
+&toMouseLayer  &kp Z               &kp X       &kp C             &kp V            &NAV2        &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH             &to 6
                                                &kp TAB           &lt 1 BACKSPACE  &kp SPACE    &kp ENTER  &lt 2 ESC    &kp BSPC
             >;
         };
@@ -379,10 +388,10 @@
 
         vim {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp K    &trans  &trans  &trans
-        &trans  &trans  &trans  &kp A   &kp O     &kp H   &kp J    &kp L   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp B   &trans   &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &to 0   &kp ESC  &trans
+        &trans  &trans  &kp LA(RA(LEFT_ARROW))  &kp LA(RIGHT)      &trans    &trans  &kp K    &trans         &trans  &trans
+        &trans  &trans  &kp LS(LA(LEFT))        &kp LS(LA(RIGHT))  &kp O     &kp H   &kp J    &kp L          &trans  &trans
+&trans  &trans  &trans  &trans                  &trans             &trans    &kp B   &trans   &trans         &trans  &trans  &trans
+                        &trans                  &trans             &to 0     &to 0   &kp ESC  &kp BACKSPACE
             >;
         };
     };
