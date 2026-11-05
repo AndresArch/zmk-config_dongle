@@ -400,10 +400,10 @@
 
         vim {
             bindings = <
-       &none  &none  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)      &none    &none  &kp LA(LEFT)      &kp LA(RIGHT)      &none  &none
-       &none  &none  &kp LS(LC(LEFT))    &kp LS(LC(RIGHT))  &none    &none  &kp LS(LA(LEFT))  &kp LS(LA(RIGHT))  &none  &none
-&none  &none  &none  &none               &none              &none    &none  &none             &none              &none  &none  &none
-                     &none               &none              &to 0    &to 0  &kp ESC           &kp BACKSPACE
+       &none  &none  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)      &kp UP_ARROW    &kp HOME      &kp LA(LEFT)      &kp LA(RIGHT)      &none  &none
+       &none  &none  &kp LS(LC(LEFT))    &kp LS(LC(RIGHT))  &kp DOWN        &kp END       &kp LS(LA(LEFT))  &kp LS(LA(RIGHT))  &none  &none
+&none  &none  &none  &none               &kp LEFT           &kp RIGHT       &kp LS(HOME)  &kp LS(END)       &none              &none  &none  &none
+                     &none               &none              &to 0           &to 0         &kp ESC           &kp BACKSPACE
             >;
 
             label = "nav2";
