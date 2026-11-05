@@ -201,7 +201,7 @@
             #binding-cells = <0>;
             bindings = <&kp B>, <&to 9>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <550>;
         };
     };
 
@@ -388,11 +388,13 @@
 
         vim {
             bindings = <
-        &trans  &trans  &kp LA(RA(LEFT_ARROW))  &kp LA(RIGHT)      &trans    &trans  &kp K    &trans         &trans  &trans
-        &trans  &trans  &kp LS(LA(LEFT))        &kp LS(LA(RIGHT))  &kp O     &kp H   &kp J    &kp L          &trans  &trans
-&trans  &trans  &trans  &trans                  &trans             &trans    &kp B   &trans   &trans         &trans  &trans  &trans
-                        &trans                  &trans             &to 0     &to 0   &kp ESC  &kp BACKSPACE
+       &none  &none  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)      &none    &none  &kp LA(LEFT)          &kp LA(RIGHT)      &none  &none
+       &none  &none  &kp LS(LC(LEFT))    &kp LS(LC(RIGHT))  &none    &none  &kp LS(LA(RC(LEFT)))  &kp LS(LA(RIGHT))  &none  &none
+&none  &none  &none  &none               &none              &none    &none  &none                 &none              &none  &none  &none
+                     &none               &none              &to 0    &to 0  &kp ESC               &kp BACKSPACE
             >;
+
+            label = "nav2";
         };
     };
 };
